@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-container">
+            <div id="start-screen" class="screen active">
+                <h1>Interactive Quiz Game</h1>
+                <div class="category-selection">
+                    <h2>Select a Category</h2>
+                    <div class="categories">
+                        <button class="category-btn" data-category="geography">
+                            <i class="fas fa-globe-americas"></i>
+                            Geography
+                        </button>
+                        <button class="category-btn" data-category="science">
+                            <i class="fas fa-flask"></i>
+                            Science & Nature
+                        </button>
+                        <button class="category-btn" data-category="pop-culture">
+                            <i class="fas fa-film"></i>
+                            Pop Culture
+                        </button>
+                        <button class="category-btn" data-category="coding">
+                            <i class="fas fa-code"></i>
+                            Coding & Tech
+                        </button>
+                        <button class="category-btn" data-category="history">
+                            <i class="fas fa-landmark"></i>
+                            History
+                        </button>
+                        <button class="category-btn" data-category="sports">
+                            <i class="fas fa-futbol"></i>
+                            Sports
+                        </button>
+                        <button class="category-btn" data-category="music">
+                            <i class="fas fa-music"></i>
+                            Music
+                        </button>
+                        <button class="category-btn" data-category="movies">
+                            <i class="fas fa-film"></i>
+                            Movies & TV
+                        </button>
+                    </div>
+                </div>
+                <div class="difficulty-selection">
+                    <h2>Select Difficulty</h2>
+                    <div class="difficulties">
+                        <button class="difficulty-btn" data-difficulty="easy">
+                            <i class="fas fa-star"></i>
+                            Easy
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="medium">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            Medium
+                        </button>
+                        <button class="difficulty-btn" data-difficulty="hard">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            Hard
+                        </button>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn" disabled>Start Quiz</button>
+            </div>
+
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="timer">Time: <span id="time">30</span>s</div>
+                </div>
+                <div class="question-container">
+                    <div id="question-text"></div>
+                    <div id="hint-text" class="hint-text"></div>
+                    <div class="hint-container">
+                        <button id="hint-btn" class="hint-btn">
+                            <i class="fas fa-lightbulb"></i> Get Hint
+                        </button>
+                    </div>
+                    <div id="options-container" class="options"></div>
+                </div>
+                <div class="quiz-footer">
+                    <button id="next-btn" class="btn" disabled>Next Question</button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <h2>Quiz Complete!</h2>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="correct-answers">0</span> Correct
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-times-circle"></i>
+                        <span id="wrong-answers">0</span> Wrong
+                    </div>
+                </div>
+                <button id="restart-btn" class="btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
